@@ -1,0 +1,270 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Sprites/Wood Letters/letter12.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Wood Letters/letter14.png" type="Texture" id=2]
+[ext_resource path="res://Background.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprites/Wood Letters/letter13.png" type="Texture" id=4]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://BushTileMap.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Sprites/Wood Letters/letter11.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Wood Letters/letter17.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Wood Letters/letter20.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Wood Letters/letter05.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Wood Letters/letter24.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Wood Letters/letter19.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Wood Letters/letter00.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Wood Letters/letter03.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Wood Letters/letter07.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Wood Letters/letter18.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Wood Letters/letter02.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Wood Letters/letter04.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Wood Letters/letter08.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Wood Letters/letter06.png" type="Texture" id=20]
+[ext_resource path="res://RichTextLabel2.gd" type="Script" id=21]
+[ext_resource path="res://Return.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Return.gd" type="Script" id=23]
+
+[node name="Done" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource( 3 )]
+
+[node name="BushTileMap" parent="." instance=ExtResource( 6 )]
+tile_data = PoolIntArray( 0, 0, 131073, 1, 0, 65537, 2, 0, 65537, 3, 0, 65537, 4, 0, 65537, 5, 0, 65537, 6, 0, 65537, 7, 0, 65537, 8, 0, 65537, 9, 0, 65537, 10, 0, 65537, 11, 0, 65537, 12, 0, 65537, 13, 0, 65537, 14, 0, 65537, 15, 0, 131072, 65536, 0, 65536, 65551, 0, 65536, 131072, 0, 65536, 131087, 0, 65536, 196608, 0, 196610, 196609, 0, 65537, 196610, 0, 65537, 196611, 0, 65537, 196612, 0, 65537, 196613, 0, 65537, 196614, 0, 65537, 196615, 0, 65537, 196616, 0, 65537, 196617, 0, 65537, 196618, 0, 65537, 196619, 0, 65537, 196620, 0, 65537, 196621, 0, 65537, 196622, 0, 65537, 196623, 0, 196611, 262144, 0, 65536, 262159, 0, 65536, 327680, 0, 65536, 327695, 0, 65536, 393216, 0, 65536, 393231, 0, 65536, 458752, 0, 65536, 458767, 0, 65536, 524288, 0, 131075, 524289, 0, 65537, 524290, 0, 65537, 524291, 0, 65537, 524292, 0, 65537, 524293, 0, 65537, 524294, 0, 65537, 524295, 0, 65537, 524296, 0, 65537, 524297, 0, 65537, 524298, 0, 65537, 524299, 0, 65537, 524300, 0, 65537, 524301, 0, 65537, 524302, 0, 65537, 524303, 0, 131074 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 48.0
+margin_top = 192.0
+margin_right = 464.0
+margin_bottom = 244.0
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Return" parent="." instance=ExtResource( 22 )]
+script = ExtResource( 23 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 48, 40 )
+
+[node name="letter02" type="Sprite" parent="."]
+position = Vector2( 48, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="letter13" type="Sprite" parent="."]
+position = Vector2( 72, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="letter06" type="Sprite" parent="."]
+position = Vector2( 84, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 20 )
+
+[node name="letter00" type="Sprite" parent="."]
+position = Vector2( 108, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+
+[node name="letter11" type="Sprite" parent="."]
+position = Vector2( 144, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="letter01" type="Sprite" parent="."]
+position = Vector2( 156, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+
+[node name="letter08" type="Sprite" parent="."]
+position = Vector2( 180, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 19 )
+
+[node name="letter14" type="Sprite" parent="."]
+position = Vector2( 204, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="letter05" type="Sprite" parent="."]
+position = Vector2( 288, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="letter09" type="Sprite" parent="."]
+position = Vector2( 300, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 19 )
+
+[node name="letter15" type="Sprite" parent="."]
+position = Vector2( 312, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="letter10" type="Sprite" parent="."]
+position = Vector2( 324, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 19 )
+
+[node name="letter04" type="Sprite" parent="."]
+position = Vector2( 360, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 18 )
+
+[node name="letter07" type="Sprite" parent="."]
+position = Vector2( 348, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 15 )
+
+[node name="letter03" type="Sprite" parent="."]
+position = Vector2( 372, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 14 )
+
+[node name="letter12" type="Sprite" parent="."]
+position = Vector2( 61, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 15 )
+
+[node name="letter16" type="Sprite" parent="."]
+position = Vector2( 73, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 18 )
+
+[node name="letter17" type="Sprite" parent="."]
+position = Vector2( 105, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 18 )
+
+[node name="letter18" type="Sprite" parent="."]
+position = Vector2( 117, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="letter19" type="Sprite" parent="."]
+position = Vector2( 141, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 18 )
+
+[node name="letter20" type="Sprite" parent="."]
+position = Vector2( 177, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+
+[node name="letter21" type="Sprite" parent="."]
+position = Vector2( 189, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 18 )
+
+[node name="letter22" type="Sprite" parent="."]
+position = Vector2( 225, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+
+[node name="letter23" type="Sprite" parent="."]
+position = Vector2( 237, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 20 )
+
+[node name="letter24" type="Sprite" parent="."]
+position = Vector2( 249, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 18 )
+
+[node name="letter25" type="Sprite" parent="."]
+position = Vector2( 273, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 19 )
+
+[node name="letter26" type="Sprite" parent="."]
+position = Vector2( 60, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="letter27" type="Sprite" parent="."]
+position = Vector2( 96, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+
+[node name="letter28" type="Sprite" parent="."]
+position = Vector2( 120, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+
+[node name="letter29" type="Sprite" parent="."]
+position = Vector2( 132, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="letter30" type="Sprite" parent="."]
+position = Vector2( 168, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+
+[node name="letter31" type="Sprite" parent="."]
+position = Vector2( 192, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="letter32" type="Sprite" parent="."]
+position = Vector2( 216, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 16 )
+
+[node name="letter34" type="Sprite" parent="."]
+position = Vector2( 252, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="letter35" type="Sprite" parent="."]
+position = Vector2( 264, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="letter36" type="Sprite" parent="."]
+position = Vector2( 336, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 16 )
+
+[node name="letter37" type="Sprite" parent="."]
+position = Vector2( 49, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+
+[node name="letter38" type="Sprite" parent="."]
+position = Vector2( 93, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 16 )
+
+[node name="letter39" type="Sprite" parent="."]
+position = Vector2( 129, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+
+[node name="letter40" type="Sprite" parent="."]
+position = Vector2( 153, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+
+[node name="letter41" type="Sprite" parent="."]
+position = Vector2( 201, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 16 )
+
+[node name="letter42" type="Sprite" parent="."]
+position = Vector2( 213, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 16 )
+
+[node name="letter43" type="Sprite" parent="."]
+position = Vector2( 285, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 16 )
+
+[node name="letter33" type="Sprite" parent="."]
+position = Vector2( 240, 144 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )

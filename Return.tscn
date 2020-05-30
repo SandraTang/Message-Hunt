@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Sprites/Return/replay3.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Return/replay1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Return/replay0.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Return/replay2.png" type="Texture" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 448, 64 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+frame = 1
+playing = true
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 464, 80 )
+rotation = 1.5708
+shape = SubResource( 2 )

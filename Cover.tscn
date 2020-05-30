@@ -1,0 +1,103 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Portal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprites/Wood Letters/letter06.png" type="Texture" id=4]
+[ext_resource path="res://BushTileMap.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Background.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Sprites/Wood Letters/letter07.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Wood Letters/letter12.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Wood Letters/letter00.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Wood Letters/letter18.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Wood Letters/letter13.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Wood Letters/letter19.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Wood Letters/letter20.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Wood Letters/letter04.png" type="Texture" id=14]
+[ext_resource path="res://Letters.tscn" type="PackedScene" id=15]
+
+[node name="Cover" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource( 6 )]
+
+[node name="BushTileMap" parent="." instance=ExtResource( 5 )]
+scale = Vector2( 2, 2 )
+tile_data = PoolIntArray( 0, 0, 131073, 1, 0, 65537, 2, 0, 65537, 3, 0, 65537, 4, 0, 65537, 5, 0, 65537, 6, 0, 65537, 7, 0, 131072, 65536, 0, 65536, 65543, 0, 65536, 131072, 0, 65536, 131079, 0, 65536, 196608, 0, 65536, 196615, 0, 65536, 262144, 0, 2, 262151, 0, 2 )
+
+[node name="Portal" parent="." instance=ExtResource( 3 )]
+position = Vector2( 392, 200 )
+scale = Vector2( 2, 2 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Enemy" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 200, 248 )
+scale = Vector2( 2, 2 )
+horiz = true
+start = 200
+stop = 408
+
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 112, 216 )
+scale = Vector2( 2, 2 )
+
+[node name="Letters" parent="YSort" instance=ExtResource( 15 )]
+position = Vector2( 152, 248 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Node" type="Node" parent="."]
+
+[node name="letter04" type="Sprite" parent="Node"]
+position = Vector2( 162, 108 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 14 )
+
+[node name="letter05" type="Sprite" parent="Node"]
+position = Vector2( 402, 108 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 14 )
+
+[node name="letter20" type="Sprite" parent="Node"]
+position = Vector2( 234, 180 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 13 )
+
+[node name="letter12" type="Sprite" parent="Node"]
+position = Vector2( 114, 108 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 8 )
+
+[node name="letter18" type="Sprite" parent="Node"]
+position = Vector2( 258, 108 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
+
+[node name="letter19" type="Sprite" parent="Node"]
+position = Vector2( 210, 108 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
+
+[node name="letter13" type="Sprite" parent="Node"]
+position = Vector2( 282, 180 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 11 )
+
+[node name="letter21" type="Sprite" parent="Node"]
+position = Vector2( 330, 180 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 12 )
+
+[node name="letter07" type="Sprite" parent="Node"]
+position = Vector2( 186, 180 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 7 )
+
+[node name="letter06" type="Sprite" parent="Node"]
+position = Vector2( 354, 108 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+
+[node name="letter00" type="Sprite" parent="Node"]
+position = Vector2( 306, 108 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )

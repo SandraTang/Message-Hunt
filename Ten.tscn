@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://BushTileMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Portal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Background.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Letters.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=6]
+
+[node name="Ten" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource( 4 )]
+
+[node name="BushTileMap" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( 0, 0, 131073, 1, 0, 65537, 2, 0, 65537, 3, 0, 196609, 4, 0, 65537, 5, 0, 65537, 6, 0, 65537, 7, 0, 65537, 8, 0, 65537, 9, 0, 65537, 10, 0, 65537, 11, 0, 65537, 12, 0, 65537, 13, 0, 65537, 14, 0, 65537, 15, 0, 131072, 65536, 0, 65536, 65539, 0, 65536, 65551, 0, 65536, 131072, 0, 65536, 131075, 0, 131075, 131076, 0, 131072, 131080, 0, 131073, 131081, 0, 65537, 131082, 0, 65537, 131083, 0, 131072, 131085, 0, 131073, 131086, 0, 65537, 131087, 0, 196611, 196608, 0, 65536, 196612, 0, 131075, 196613, 0, 65537, 196614, 0, 65538, 196616, 0, 65536, 196619, 0, 65536, 196621, 0, 65536, 196623, 0, 65536, 262144, 0, 65536, 262152, 0, 65536, 262155, 0, 131075, 262156, 0, 65537, 262157, 0, 131074, 262159, 0, 65536, 327680, 0, 65536, 327684, 0, 131073, 327685, 0, 65537, 327686, 0, 65538, 327688, 0, 65536, 327695, 0, 65536, 393216, 0, 65536, 393219, 0, 131073, 393220, 0, 131074, 393224, 0, 2, 393231, 0, 65536, 458752, 0, 65536, 458755, 0, 65536, 458767, 0, 65536, 524288, 0, 131075, 524289, 0, 65537, 524290, 0, 65537, 524291, 0, 196608, 524292, 0, 65537, 524293, 0, 65537, 524294, 0, 65537, 524295, 0, 65537, 524296, 0, 65537, 524297, 0, 65537, 524298, 0, 65537, 524299, 0, 65537, 524300, 0, 65537, 524301, 0, 65537, 524302, 0, 65537, 524303, 0, 131074 )
+
+[node name="Portal" parent="." instance=ExtResource( 2 )]
+position = Vector2( 464, 240 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Enemy" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 464, 40 )
+horiz = true
+start = 272
+stop = 464
+
+[node name="Enemy2" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 240, 192 )
+start = 80
+stop = 192
+
+[node name="Letters" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 400, 104 )
+
+[node name="Player" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 48, 40 )
